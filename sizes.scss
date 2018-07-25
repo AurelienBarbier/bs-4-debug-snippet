@@ -6,22 +6,23 @@ body{
       opacity: 1 !important;
     }
   }
-  &.size{
+  &{
     &:after{
       position:fixed;
       bottom:0px;
       left:0px;
-      background-color:$brand-primary;
+      background-color: pink;
       padding:8px;
       color:#fff;
       font-weight:bold;
       opacity:0.5;
-      border:2px solid #fff;
+      border:2px solid #FFF;
       font-size:25px;
-      @media screen and (max-width: $screen-sm-min - 1){ content:"XS"; }
-      @media screen and (min-width: $screen-sm-min){     content:"SM"; }
-      @media screen and (min-width: $screen-md-min){     content:"MD"; }
-      @media screen and (min-width: $screen-lg-min){     content:"LG"; }
+      @include media-breakpoint-only(xs) { content:"XS"; }
+      @include media-breakpoint-only(sm) { content:"SM"; }
+      @include media-breakpoint-only(md) { content:"MD"; }
+      @include media-breakpoint-only(lg) { content:"LG"; }
+      @include media-breakpoint-only(xl) { content:"XL"; }
     }
   }
 }
